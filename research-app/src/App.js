@@ -30,17 +30,20 @@ function App() {
   }
 
   return (
-    <Routes>      
-      {
-        components.map((route, index) => (
-          <Route key={index} path={route.path} element={
-            <PrivateRoute> 
-              <route.component />             
-            </PrivateRoute> 
-          } />
-        ))
-      }      
-    </Routes>
+    <>
+      {components[0].component()}
+    </>
+    // <Routes>      
+    //   {
+    //     components.map((route, index) => (
+    //       <Route key={index} path={route.path} element={
+    //         <PrivateRoute> 
+    //           <route.component />             
+    //         </PrivateRoute> 
+    //       } />
+    //     ))
+    //   }      
+    // </Routes>
   );  
 }
 
